@@ -60,9 +60,7 @@
   </Target>
 
   <Target Name="Clean">
-    <RemoveDir  Directories="$(MSBuildProjectDirectory)/../_layout/bin" />
-    <RemoveDir  Directories="$(MSBuildProjectDirectory)/../_layout/externals" />
-    <RemoveDir  Directories="$(MSBuildProjectDirectory)/../_layout/*" />
+    <RemoveDir  Directories="$(MSBuildProjectDirectory)/../_layout" ContinueOnError="WarnAndContinue" />
     <RemoveDir  Directories="Microsoft.VisualStudio.Services.Agent/bin" />
     <RemoveDir  Directories="Microsoft.VisualStudio.Services.Agent/obj" />
     <RemoveDir  Directories="Agent.Listener/bin" />
